@@ -23,12 +23,11 @@ public class DBConnectionServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		//setup connection variables
-		
+		//variables used to setup connection
 		String jdbcUrl = "jdbc:mysql://localhost:3306/web_spring_customer_tracker_demo_db?allowPublicKeyRetrieval=true&useSSL=false";
 		String user = "springwebappuser";
 		String pass = "springwebpass";
-		//com.mysql.cj.jdbc.Driver
+		//driver for MySQL
 		String driver = "com.mysql.cj.jdbc.Driver";
 		
 		//get connection to database
