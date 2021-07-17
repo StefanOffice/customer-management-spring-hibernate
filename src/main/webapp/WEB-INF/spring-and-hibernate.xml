@@ -59,7 +59,7 @@
 		id="sessionFactory">
 
 		<property name="dataSource" ref="myDataSource" />
-		<property value="stef.springhibernatecm.entity"
+		<property value="stef.springhibernatecm.app.entity"
 			name="packagesToScan" />
 
 		<property name="hibernateProperties">
