@@ -19,7 +19,8 @@ public class CustomerDAOImplementation implements ICustomerDAO{
 		
 		
 		@Override
-		@Transactional //this annotation automatically creates and commits a transaction
+		// @Transactional - no longer necessary here 
+		// as it's moved over to the service layer in IServiceCustomerImplementation
 		public List<Customer> getCustomers() {
 			//get the current hibernate session
 			Session session = sessionFactory.getCurrentSession();
