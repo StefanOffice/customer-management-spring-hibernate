@@ -43,5 +43,15 @@ public class CustomerController {
 		return "customers-list";
 	}
 	
+	
+	@GetMapping("/showFormForAdd")
+	public String showFormForAdd(Model model) {
+		
+		//create a new object to store the information the user enters
+		Customer customer = new Customer();
+		model.addAttribute("customer", customer);
+		
+		return "customer-form";
+	}
 
 }
