@@ -25,11 +25,20 @@ public class CustomerDAOImplementation implements ICustomerDAO{
 			//get the current hibernate session
 			Session session = sessionFactory.getCurrentSession();
 			//create a query using HQL (hibernate query language very similar to SQL)
-			Query<Customer> theQuery = session.createQuery("from Customer", Customer.class);
+			Query<Customer> theQuery = session.createQuery("from Customer order by lastName", Customer.class);
 			//execute the query and get the result list
 			List<Customer> customers = theQuery.getResultList();
 			//return the results
 			return customers;
 		}
+		
+		@Override
+		public void saveCustomer(Customer customer) {
+			
+			Session session = sessionFactory.getCurrentSession();
+			session.save(customer);
+			
+		}
+
 
 }

@@ -10,7 +10,7 @@ CREATE TABLE Customer(
 
 INSERT INTO Customer VALUES 
 	(1,'Lily','Aldrin','lily.aldrin@email.com'),
-	(2,'Marshal','Eriksen','marshal.eriksen@email.com'),
+	(2,'Marshall','Eriksen','marshall.eriksen@email.com'),
 	(3,'Robin','Scherbatsky','robin.scherbatsky@email.com'),
 	(4,'Ted','Mosby','ted.mosby@email.com'),
 	(5,'Barney','Stinson','barney.stinson@email.com'),

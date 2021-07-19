@@ -22,6 +22,9 @@ public class IServiceCustomerImplementation implements IServiceCustomer{
 		return customerDAO.getCustomers();
 	}
 	
-	
-
+	@Override
+	@Transactional
+	public void saveCustomer(Customer customer) {
+		customerDAO.saveCustomer(customer);
+	}
 }
