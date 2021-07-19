@@ -36,9 +36,17 @@ public class CustomerDAOImplementation implements ICustomerDAO{
 		public void saveCustomer(Customer customer) {
 			
 			Session session = sessionFactory.getCurrentSession();
-			session.save(customer);
+			//now this method can be used for both saving and updating
+			session.saveOrUpdate(customer);
 			
 		}
 
+		@Override
+		public Customer getCustomer(int id) {
+			//get the current session
+			Session session = sessionFactory.getCurrentSession();
+			//read from database using the primary key
+			return session.get(Customer.class, id);
+		}
 
 }

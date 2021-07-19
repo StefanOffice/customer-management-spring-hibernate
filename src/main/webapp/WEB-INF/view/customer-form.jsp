@@ -26,7 +26,14 @@
 	<div id="container">
 		<h3>Save Customer</h3>
 	
-		<form:form action="saveCustomer" modelAttribute="customer" method="POST">
+		<!--  has to be the same name as
+	model.addAttribute("customer", customer); -->
+		<form:form action="saveCustomer" 
+			modelAttribute="customer"
+			method="POST">
+		<!-- need to associate this data with customer id 
+			updating doesn't work without this line-->
+		<form:hidden path="id"/> 
 		
 			<table>
 				<tbody>
