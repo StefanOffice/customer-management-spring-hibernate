@@ -48,5 +48,19 @@ public class CustomerDAOImplementation implements ICustomerDAO{
 			//read from database using the primary key
 			return session.get(Customer.class, id);
 		}
+		
+		@Override
+		public void deleteCustomer(int theId) {
+			Session session = sessionFactory.getCurrentSession();
+			Customer customer = session.get(Customer.class, theId);
+			session.delete(customer);
+			
+			//or
+			/**
+			Query query = session.createQuery("delete from Customer where id=:theId");
+			query.setParameter("customerId", theId);
+			query.executeUpdate();
+			**/
+		}
 
 }

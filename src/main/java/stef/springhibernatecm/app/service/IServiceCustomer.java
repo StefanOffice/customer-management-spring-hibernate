@@ -18,4 +18,6 @@ public interface IServiceCustomer {
 
 	public Customer getCustomer(int id);
 	
+	public void deleteCustomer(int id);
+	
 }
